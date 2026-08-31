@@ -13,7 +13,7 @@ services:
     image: ravid145/mongodb:1.0.0 # docker build -t ravid145/mongodb:1.0.0
     container_name: mongodb
 
-network:
+networks:
   default:
     driver: bridge
     name: roboshop
