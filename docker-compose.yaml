@@ -2,7 +2,7 @@ services:
   catalogue:
      build:
        dockerfile: catalogue.Dockerfile
-     image: ravid145/catalogue:1.0.0
+     image: catalogue:1.0.0
      container_name: catalogue
      depends_on:
      - mongodb
@@ -10,7 +10,7 @@ services:
   mongodb: 
     build: 
       dockerfile: mongodb.Dockerfile # it moves to mongodb directory
-    image: ravid145/mongodb:1.0.0 # docker build -t ravid145/mongodb:1.0.0
+    image: mongodb:1.0.0 # docker build -t ravid145/mongodb:1.0.0
     container_name: mongodb
 
 networks:
