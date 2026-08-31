@@ -65,20 +65,20 @@ services:
     build: ./mongodb
     image: ravid145/mongodb:1.0.0
     container_name: mongodb
-    volums: 
+    volumes: 
     - mongodb: /data/db
 
   redis:
     image: redis:7.0
     container_name: redis
-    vokums:
+    volumes:
     - redis: /data
 
   mysql:
     build: ./mysql
     image: ravid145/mysql:1.0.0
     container_name: mysql
-    volums: 
+    volumes: 
     - mysql: /var/lib/mysql
 
   rabbitmq:
@@ -87,7 +87,7 @@ services:
     environment:
       RABBITMQ_DEFAULT_USER: roboshop
       RABBITMQ_DEFAULT_PASS: roboshop123
-    volums:
+    volumes:
     - rabbitmq: /var/lib/rabbitmq
 
 networks:
@@ -96,7 +96,8 @@ networks:
     name: roboshop
     external: false
 
-volums:
+volumes:
   mongodb:
   redis:
   rabbitmq:
+  mysql:
