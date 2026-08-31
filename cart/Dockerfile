@@ -6,4 +6,5 @@ RUN npm install
 ENV REDIS_HOST = "redis" \
     CATALOGUE_HOST="catlogue" \
     CATALOGUE_PORT= "8080" 
-CMD["node","server.js"]
+
+CMD ["node", "server.js"]
