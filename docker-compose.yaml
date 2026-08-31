@@ -6,6 +6,7 @@ services:
      container_name: catalogue
      depends_on:
      - mongodb
+     
   user:
     build: ./user
     image: ravid145/user:1.0.0
