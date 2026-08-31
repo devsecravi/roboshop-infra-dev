@@ -8,14 +8,14 @@ services:
      - mongodb
   user:
     build: ./user
-    image: ravid145/user:1.0.0
+    image: user:1.0.0
     container_name: user
     depends_on:
     - redis
-    
+
   frontend:
     build: ./frontend
-    image: ravid145/frontend:1.0.0
+    image: frontend:1.0.0
     container_name: frontend
     ports:
     - "80:80"
