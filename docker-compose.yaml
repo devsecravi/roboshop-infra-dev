@@ -6,11 +6,18 @@ services:
      container_name: catalogue
      depends_on:
      - mongodb
-     
+
   user:
     build: ./user
     image: ravid145/user:1.0.0
     container_name: user
+    depends_on:
+    - redis
+
+  cart:
+    build: ./cart
+    image: ravid145/cart:1.0.0
+    container_name: cart
     depends_on:
     - redis
 
@@ -23,6 +30,7 @@ services:
     depends_on:
     - catalogue
     - user
+    - cart
 
 
   mongodb: 
